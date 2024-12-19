@@ -4,17 +4,11 @@ import 'dart:io';
 
 void main() {
   stdout.write("Enter a number: ");
-  String? input = stdin.readLineSync();
-  if (input != null && int.tryParse(input) != null) {
-    int number = int.parse(input);
-    if (number % 2 == 0) {
-      print("$number is even number");
+  int? input = int.parse(stdin.readLineSync()!);
+    if (input % 2 == 0) {
+      print("$input is even number");
     } else {
-      print("$number this number is odd");
+      print("$input this number is odd");
     }
-     } else {
-    print("Invalid input! Please enter a valid integer.");
-  }
-
-  }
-
+  
+}
